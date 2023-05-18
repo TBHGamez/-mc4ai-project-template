@@ -164,3 +164,5 @@ def classi():
                           go.Scatter3d(x=df3['S6'], y=df3['S-AVG'], z=df3['GPA'], mode='markers')])
      st.pyplot(fig)
     barD()
+    
+classi()
