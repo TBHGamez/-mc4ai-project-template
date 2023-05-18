@@ -79,7 +79,6 @@ with col4:
     elif times == ['Chiều']:
      dft = dfai[dfai['PYTHON-CLASS'].str.endswith('C')]
     else: dft = dfai
-st.write(dft)
 data = {'NAME' : [], 
         'GENDER': [],
         'CLASS': [],
