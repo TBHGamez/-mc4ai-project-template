@@ -3,7 +3,7 @@ import re
 import pandas as pd
 import plotly.express as px
 
-df = pd.read_csv("score.csv", low_memory=False)
+df = pd.read_csv("py4ai-score.csv", low_memory=False)
 
 def graph():
     def sohs():
