@@ -20,6 +20,7 @@ for i in df.index:
   r = df.loc[i][4:13]
   avg.append(r.mean())
 df['S-AVG'] = avg
+
 def classi():
     def mhpf():
       X = df[['S6','S-AVG']].values.copy()
@@ -164,3 +165,5 @@ def classi():
                           go.Scatter3d(x=df3['S6'], y=df3['S-AVG'], z=df3['GPA'], mode='markers')])
      st.pyplot(fig)
     barD()
+    
+classi()
