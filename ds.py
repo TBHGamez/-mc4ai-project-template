@@ -121,21 +121,51 @@ with colb:
     if hoa:
      dfh = dft[dft['CLASS-GROUP'].isin(['Chuyên Hóa'])]
     else: dfh = pd.DataFrame()
-
-     
-# st.write(dflh)
 with colc:
     eng = st.checkbox('Anh')
     tin = st.checkbox('Tin')
+    if eng:
+     dfa = dft[dft['CLASS-GROUP'].isin(['Chuyên Anh'])]
+    else: dfa = pd.DataFrame()
+    if tin:
+     dfti = dft[dft['CLASS-GROUP'].isin(['Chuyên Tin'])]
+    else: dfti = pd.DataFrame()
 with cold:
-    su_dia = st.checkbox('Sử Địa')
-    tr_n = st.checkbox('Trung Nhật')
+    sd = st.checkbox('Sử Địa')
+    tn = st.checkbox('Trung Nhật')
+    if sd:
+     dfsd = dft[dft['CLASS-GROUP'].isin(['Sử Địa'])]
+    else: dfsd = pd.DataFrame()
+    if tn:
+     dftn = dft[dft['CLASS-GROUP'].isin(['Trung Nhật'])]
+    else: dftn = pd.DataFrame()
 with cole:
-    th_sn = st.checkbox('TH/SN')
-    diff = st.checkbox('Khác')
-   
+    ts = st.checkbox('TH/SN')
+    k = st.checkbox('Khác')
+    if ts:
+     dfts = dft[dft['CLASS-GROUP'].isin(['Tích Hợp/Song Ngữ'])]
+    else: dfts = pd.DataFrame()
+    if k:
+     dfk = dfk[dft['CLASS-GROUP'].isin(['Khác'])]
+    else: dfk = pd.DataFrame()
 for i in dfto.index:
      dfr.loc[i] = list(dfto.loc[i])
 for i in dfv.index:
      dfr.loc[i] = list(dfv.loc[i])
+for i in dfl.index:
+     dfr.loc[i] = list(dfl.loc[i])
+for i in dfh.index:
+     dfr.loc[i] = list(dfh.loc[i])
+for i in dfa.index:
+     dfr.loc[i] = list(dfa.loc[i])
+for i in dfti.index:
+     dfr.loc[i] = list(dfti.loc[i])
+for i in dfsd.index:
+     dfr.loc[i] = list(dfsd.loc[i])
+for i in dftn.index:
+     dfr.loc[i] = list(dftn.loc[i])
+for i in dfts.index:
+     dfr.loc[i] = list(dfts.loc[i])
+for i in dfk.index:
+     dfr.loc[i] = list(dfk.loc[i])
 st.write(dfr)
