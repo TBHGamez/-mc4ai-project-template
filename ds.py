@@ -168,3 +168,4 @@ for i in dfts.index:
 for i in dfk.index:
      dfr.loc[i] = list(dfk.loc[i])
 st.write(dfr)
+st.write('Số học sinh:', len(dfr),'(', dfr[dfr['GENDER']=='M'].value_counts(),'nam',dfr[dfr['GENDER']=='F'].value_counts(),'nữ')
