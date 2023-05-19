@@ -113,7 +113,7 @@ def classi():
       weightsmgf = model.coef_[0]
       biasmgf = model.intercept_
       y_test_pred = model.predict(x_test)
-#       mae(y_test, y_test_pred), mse(y_test, y_test_pred), model.score(x_test, y_test)
+
       st.write('DỰ ĐOÁN ĐIỂM FINAL DỰA TRÊN MIDTERM & GPA')
       plt.scatter(xmgf, ymgf)
       plt.plot(xmgf, model.predict(xmgf.reshape(-1,1)), c='y')
