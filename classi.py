@@ -64,8 +64,8 @@ def classi():
                             go.Scatter3d(x=df2['S6'], y=df2['S-AVG'], z=df2['GPA'], mode='markers'),
                             go.Scatter3d(x=df3['S6'], y=df3['S-AVG'], z=df3['GPA'], mode='markers')])
       
-      st.pyplot(fig)
-      st.set_option('deprecation.showPyplotGlobalUse', False)
+      st.plotly_chart(fig, use_container_width=False)
+      
      barD()
     elif S6 and S_AVG:
      def mhpf():
