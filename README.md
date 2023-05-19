@@ -23,3 +23,5 @@ Phân tích điểm thi|Đỗ Vân Anh|17/05/23
 Clustering|Hàng Tuấn Bảo|17/05/23
 Regression|Hàng Tuấn Bảo|17/05/23
 Classify|Phạm Nguyễn Minh Khuê|17/05/23
+
+Link Demo: https://www.youtube.com/watch?v=Ll3zO4SUV8g&ab_channel=06-10CT2-H%C3%A0ngTu%E1%BA%A5nB%E1%BA%A3o
