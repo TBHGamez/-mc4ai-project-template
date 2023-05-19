@@ -145,7 +145,7 @@ with cole:
      dfts = dft[dft['CLASS-GROUP'].isin(['Tích Hợp/Song Ngữ'])]
     else: dfts = pd.DataFrame()
     if k:
-     dfk = dfk[dft['CLASS-GROUP'].isin(['Khác'])]
+     dfk = dft[dft['CLASS-GROUP'].isin(['Khác'])]
     else: dfk = pd.DataFrame()
 for i in dfto.index:
      dfr.loc[i] = list(dfto.loc[i])
