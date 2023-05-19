@@ -19,5 +19,5 @@ with tab2:
   graph.graph()
 with tab3:
   kmeans.kmeans()
-# with tab4:
-#   classi.classi()
+with tab4:
+  classi.classi()
