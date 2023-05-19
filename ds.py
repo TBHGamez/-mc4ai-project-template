@@ -36,11 +36,11 @@ def ds():
 
 
  df['CLASS-GROUP'] = df.apply(class_group, axis=1)
- print(df['CLASS-GROUP'])
+ 
 
  def buttons():
   col1, col2, col3, col4 = st.columns(4)
-
+  
   with col1:
       gender = st.write('Giới tính')
       male = st.checkbox('Nam')
