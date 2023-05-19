@@ -50,19 +50,20 @@ def classi():
       print('score:', round(model.score(XbarD, ybarD), 2))
       w1barD, w2barD, w3barD = model.coef_[0]
       bbarD = model.intercept_[0]
-      xbound = np.array([XbarD[:,0].min(), XbarD[:,0].max()])
-      ybound = np.array([XbarD[:,1].min(), XbarD[:,1].max()])
+      xbound = np.array([X[:,0].min(), X[:,0].max()])
+      ybound = np.array([X[:,1].min(), X[:,1].max()])
       xx, yy = np.meshgrid(xbound, ybound)
       xy = np.c_[xx.ravel(), yy.ravel()]
-      zbound = -(w1barD*xy[:,0]+w2barD*xy[:,1]+bbarD)/w3barD
+      zbound = -(w1*xy[:,0]+w2*xy[:,1]+b)/w3
       zbound = zbound.reshape(xx.shape)
       df1 = df[['S6','S-AVG','GPA','PASS/FAIL','PASS/FAIL_ID']]
       df2 = df1[df1['PASS/FAIL_ID'] == '1']
       df3 = df1[df1['PASS/FAIL_ID'] == '0']
+
       fig = go.Figure(data=[go.Surface(x=xbound, y=ybound, z=zbound), 
-                          go.Scatter3d(x=df2['S6'], y=df2['S-AVG'], z=df2['GPA'], mode='markers'),
-                          go.Scatter3d(x=df3['S6'], y=df3['S-AVG'], z=df3['GPA'], mode='markers')])
-      st.pyplot(fig, clear_figure=None, use_container_width=True)
+                            go.Scatter3d(x=df2['S6'], y=df2['S-AVG'], z=df2['GPA'], mode='markers'),
+                            go.Scatter3d(x=df3['S6'], y=df3['S-AVG'], z=df3['GPA'], mode='markers')])
+      st.pyplot(fig, clear_figure=None, use_container_width=False)
      barD()
     elif S6 and S_AVG:
      def mhpf():
