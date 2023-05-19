@@ -167,5 +167,7 @@ for i in dfts.index:
      dfr.loc[i] = list(dfts.loc[i])
 for i in dfk.index:
      dfr.loc[i] = list(dfk.loc[i])
+
+st.write('Số học sinh:', len(dfr),'(', len(dfr[dfr['GENDER']=='M']),'nam',len(dfr[dfr['GENDER']=='F']),'nữ',')')
+st.write('GPA cao nhất là',dfr['GPA'].values.max(),'thấp nhất là',dfr['GPA'].values.min(),' trung bình',round(dfr['GPA'].values.mean(),2)
 st.write(dfr)
-st.write('Số học sinh:', len(dfr),'(', len(dfr[dfr['GENDER']=='M']),'nam',len(dfr[dfr['GENDER']=='F']),'nữ')
