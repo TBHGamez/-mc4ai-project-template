@@ -63,7 +63,9 @@ def classi():
       fig = go.Figure(data=[go.Surface(x=xbound, y=ybound, z=zbound), 
                             go.Scatter3d(x=df2['S6'], y=df2['S-AVG'], z=df2['GPA'], mode='markers'),
                             go.Scatter3d(x=df3['S6'], y=df3['S-AVG'], z=df3['GPA'], mode='markers')])
-      st.pyplot(fig, clear_figure=None, use_container_width=False)
+      
+      st.pyplot(fig=None)
+      st.set_option('deprecation.showPyplotGlobalUse', False)
      barD()
     elif S6 and S_AVG:
      def mhpf():
